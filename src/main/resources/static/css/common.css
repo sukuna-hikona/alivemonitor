@@ -1,0 +1,719 @@
+/* 背景-----------------------------------------------------------------------------------------------------------------*/
+.backGround {
+    background-color: #181859;
+}
+
+.backGround-Red {
+    background-color: red;
+}
+
+.backGround-Yellow {
+    background-color: orange;
+}
+
+/* フロアボタン画像 ------------------------------------------------------------------------------------------------------*/
+.floorButton_OFF {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 60px;
+    border:#777777 solid 1px;
+    background-color: #ffffff;
+}
+.floorButton_ON {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 60px;
+    border:#ffffff solid 1px;
+    background-color: #777777;
+}
+
+.blink {
+    animation: BLINK 1.5s ease-in-out infinite alternate;
+    border: none;
+    background-size: contain;
+    color: red;
+}
+
+/* 試合開始時刻設定 ------------------------------------------------------------------------------------------------------*/
+.setStartTime {
+    position: absolute;
+    top: 677px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border:#777777 solid 1px;
+    background-color: #ffffff;
+}
+
+/* 監視中表示 -----------------------------------------------------------------------------------------------------------*/
+.surveillance {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    color: red;
+    border: red solid;
+    z-index: 1000;
+}
+
+/* 背景画像 -------------------------------------------------------------------------------------------------------------*/
+.floor1 {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    height: 730px;
+    width: 715px;
+    border: none;
+    background: url(../img/1f.png) no-repeat 0 0;
+    background-size: contain;
+}
+.floor2 {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    height: 730px;
+    width: 715px;
+    border: none;
+    background: url(../img/2f.png) no-repeat 0 0;
+    background-size: contain;
+}
+.floor3 {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    height: 730px;
+    width: 715px;
+    border: none;
+    background: url(../img/3f.png) no-repeat 0 0;
+    background-size: contain;
+}
+.floor5 {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    height: 730px;
+    width: 715px;
+    border: none;
+    background: url(../img/5f.png) no-repeat 0 0;
+    background-size: contain;
+}
+.floor6 {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    height: 730px;
+    width: 715px;
+    border: none;
+    background: url(../img/6f.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+/* モニタ画像 -----------------------------------------------------------------------------------------------------------*/
+.braviaR {
+    animation: BLINK 1.5s ease-in-out infinite alternate;
+    border: none;
+    background: url(../img/BRAVIA-Red.png) no-repeat 0 0;
+    background-size: contain;
+}
+.braviaY {
+    animation: BLINK 1.5s ease-in-out infinite alternate;
+    border: none;
+    background: url(../img/BRAVIA-Yellow.png) no-repeat 0 0;
+    background-size: contain;
+}
+.braviaN {
+    border: none;
+    background: url(../img/BRAVIA.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+/* モニタ位置 -----------------------------------------------------------------------------------------------------------*/
+/* テスト用 ---------------------*/
+.monitor0002 {
+    position: absolute;
+    top: 550px;
+    left: 370px;
+    height: 50px;
+    width: 50px;
+}
+
+/* 1F --------------------------*/
+.monitor2001 {
+    position: absolute;
+    top: 550px;
+    left: 370px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2002 {
+    position: absolute;
+    top: 230px;
+    left: 200px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2003 {
+    position: absolute;
+    top: 270px;
+    left: 220px;
+    height: 50px;
+    width: 50px;
+}
+/* 2F --------------------------*/
+.monitor2051 {
+    position: absolute;
+    top: 140px;
+    left: 270px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2052 {
+    position: absolute;
+    top: 170px;
+    left: 240px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2053 {
+    position: absolute;
+    top: 230px;
+    left: 210px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2054 {
+    position: absolute;
+    top: 260px;
+    left: 180px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2059 {
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2060 {
+    position: absolute;
+    top: 400px;
+    left: 375px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2062 {
+    position: absolute;
+    top: 400px;
+    left: 295px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2063 {
+    position: absolute;
+    top: 370px;
+    left: 415px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2064 {
+    position: absolute;
+    top: 370px;
+    left: 295px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2065 {
+    position: absolute;
+    top: 340px;
+    left: 490px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2066 {
+    position: absolute;
+    top: 340px;
+    left: 450px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2067 {
+    position: absolute;
+    top: 340px;
+    left: 375px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2068 {
+    position: absolute;
+    top: 340px;
+    left: 330px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2069 {
+    position: absolute;
+    top: 340px;
+    left: 265px;
+    height: 35px;
+    width: 35px;
+}
+/* 3F --------------------------*/
+.monitor2101 {
+    position: absolute;
+    top: 590px;
+    left: 420px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2102 {
+    position: absolute;
+    top: 530px;
+    left: 500px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2103 {
+    position: absolute;
+    top: 420px;
+    left: 560px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2104 {
+    position: absolute;
+    top: 200px;
+    left: 560px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2105 {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2106 {
+    position: absolute;
+    top: 100px;
+    left: 330px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2107 {
+    position: absolute;
+    top: 130px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2108 {
+    position: absolute;
+    top: 320px;
+    left: 180px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2109 {
+    position: absolute;
+    top: 350px;
+    left: 120px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2031 {
+    position: absolute;
+    top: 350px;
+    left: 120px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2110 {
+    position: absolute;
+    top: 410px;
+    left: 140px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2111 {
+    position: absolute;
+    top: 500px;
+    left: 220px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2112 {
+    position: absolute;
+    top: 580px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+}
+/* 5F --------------------------*/
+.monitor2201 {
+    position: absolute;
+    top: 490px;
+    left: 465px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2202 {
+    position: absolute;
+    top: 485px;
+    left: 500px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2203 {
+    position: absolute;
+    top: 465px;
+    left: 480px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2204 {
+    position: absolute;
+    top: 460px;
+    left: 515px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2205 {
+    position: absolute;
+    top: 440px;
+    left: 495px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2206 {
+    position: absolute;
+    top: 435px;
+    left: 530px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2207 {
+    position: absolute;
+    top: 415px;
+    left: 510px;
+    height: 35px;
+    width: 35px;
+}
+.monitor2208 {
+    position: absolute;
+    top: 350px;
+    left: 520px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2209 {
+    position: absolute;
+    top: 330px;
+    left: 620px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2210 {
+    position: absolute;
+    top: 300px;
+    left: 580px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2211 {
+    position: absolute;
+    top: 290px;
+    left: 635px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2212 {
+    position: absolute;
+    top: 150px;
+    left: 520px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2213 {
+    position: absolute;
+    top: 375px;
+    left: 180px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2214 {
+    position: absolute;
+    top: 525px;
+    left: 230px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2217 {
+    position: absolute;
+    top: 559px;
+    left: 326px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2218 {
+    position: absolute;
+    top: 553px;
+    left: 340px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2219 {
+    position: absolute;
+    top: 561px;
+    left: 343px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2220 {
+    position: absolute;
+    top: 570px;
+    left: 348px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2221 {
+    position: absolute;
+    top: 561px;
+    left: 358px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2222 {
+    position: absolute;
+    top: 569px;
+    left: 363px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2223 {
+    position: absolute;
+    top: 577px;
+    left: 370px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2224 {
+    position: absolute;
+    top: 569px;
+    left: 377px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2225 {
+    position: absolute;
+    top: 579px;
+    left: 383px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2226 {
+    position: absolute;
+    top: 571px;
+    left: 390px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2227 {
+    position: absolute;
+    top: 579px;
+    left: 397px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2228 {
+    position: absolute;
+    top: 569px;
+    left: 404px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2229 {
+    position: absolute;
+    top: 579px;
+    left: 412px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2230 {
+    position: absolute;
+    top: 571px;
+    left: 418px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2231 {
+    position: absolute;
+    top: 561px;
+    left: 423px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2232 {
+    position: absolute;
+    top: 570px;
+    left: 431px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2233 {
+    position: absolute;
+    top: 561px;
+    left: 436px;
+    height: 12px;
+    width: 12px;
+}
+.monitor2234 {
+    position: absolute;
+    top: 561px;
+    left: 449px;
+    height: 12px;
+    width: 12px;
+}
+
+/* 6F --------------------------*/
+.monitor3001 {
+    position: absolute;
+    top: 440px;
+    left: 505px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3002 {
+    position: absolute;
+    top: 340px;
+    left: 570px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3003 {
+    position: absolute;
+    top: 300px;
+    left: 570px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2070 {
+    position: absolute;
+    top: 300px;
+    left: 570px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3004 {
+    position: absolute;
+    top: 300px;
+    left: 170px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3005 {
+    position: absolute;
+    top: 460px;
+    left: 270px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2072 {
+    position: absolute;
+    top: 460px;
+    left: 270px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3006 {
+    position: absolute;
+    top: 490px;
+    left: 230px;
+    height: 50px;
+    width: 50px;
+}
+.monitor3007 {
+    position: absolute;
+    top: 540px;
+    left: 340px;
+    height: 50px;
+    width: 50px;
+}
+.monitor2074 {
+    position: absolute;
+    top: 540px;
+    left: 340px;
+    height: 50px;
+    width: 50px;
+}
+
+/* 丸数字 --------------------------------------------------------------------------------------------------------------*/
+.maru {
+    position: absolute;
+    top: -11px;
+    left: 5px;
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    line-height:50px;
+    text-align:center;
+    font-size: 0.8em;
+    color: white;
+}
+
+/* ステータスリスト -----------------------------------------------------------------------------------------------------*/
+.statusList {
+    display: table;
+    position: fixed;
+    top: 0px;
+    left: 1000px;
+    background-color: white;
+}
+.row {
+    display: table-row;
+}
+.noCell {
+    display: table-cell;
+    width: 70px;
+    border: thick double;
+    text-align: center;
+}
+.powerCell {
+    display: table-cell;
+    width: 150px;
+    border: thick double;
+    text-align: center;
+}
+.channelCell {
+    display: table-cell;
+    width: 300px;
+    border: thick double;
+    text-align: center;
+}
+.bgRed {
+    background-color: #ff7777;
+}
+
+/* 表示/非表示 ---------------------------------------------------------------------------------------------------------*/
+.Visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.Invisible {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* アニメーション ------------------------------------------------------------------------------------------------------*/
+@keyframes BLINK {
+    0%{opacity: 1;}
+    100%{opacity: 0.5;}
+}

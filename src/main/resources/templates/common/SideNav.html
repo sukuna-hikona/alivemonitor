@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Insert title here</title>
+    </head>
+    <body>
+        <div th:fragment="SideNav">
+            <div class="sidenav">
+                <ul class="nav flex-column">
+					<li th:each="i : ${#numbers.sequence(1, 6, 1)}">
+						<th:block th:if="${i} != 4">
+							<a th:href="@{|/Move?floor=${i}|}" class="nav-link text-dark py-3"
+								th:classappend="${floor eq i ? 'floorButton_ON' : 'floorButton_OFF'}">
+								<span th:text="|${i}階|"></span>
+							</a>
+						</th:block>
+					</li>
+					<li class="setStartTime">
+						<a th:href="@{/Schedule}">開始時刻設定</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+	<head th:replace="scripts/common :: LoadHeader(title = '演出用モニタ監視', scripts = ~{::script}, links = ~{::link})">
+		<link rel="stylesheet" type="text/css" href=""/>
+		<script type="text/javascript" th:src="@{/js/reLoad.js}"></script>
+    </head>
+    <body th:classappend="|${failure == 404 ? 'backGround-Red' : ''}
+                            ${failure == 500 ? 'backGround-Yellow' : ''}
+                            ${failure == 502 ? 'backGround-Yellow' : ''}
+                            ${failure == 200 ? 'backGround' : ''}|">
+        <div class="cover" th:object="${tvList}">
+            <div th:replace="common/SideNav :: SideNav"></div>
+
+            <div class="main">
+                <th:block th:if="${surveillance}">
+                    <div class="surveillance">監視中</div>
+                </th:block>
+                <div id ="floor" th:classappend="|floor${floor}|">
+                    <th:block th:each="bravia : ${tvList}">
+                        <div th:id="|monitor${bravia.getLastIP()}|" th:classappend="|monitor${bravia.getLastIP()}
+                                                                                    ${bravia.getPowerStatus() == 200 ? ' braviaN' : ''}
+                                                                                    ${bravia.getPowerStatus() == 404 ? ' braviaR' : ''}
+                                                                                    ${bravia.getPowerStatus() == 500 ? ' braviaY' : ''}
+                                                                                    ${bravia.getPowerStatus() == 502 ? ' braviaY' : ''}
+                                                                                    ${bravia.getFloorNo() == floor ? ' Visible' : ' Invisible'}|">
+                            <span class="maru" th:text="${bravia.getTvNo()}"></span>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+
+            <div class="statusList">
+                <div class="row">
+                    <div class="noCell">番号</div>
+                    <div class="powerCell">電源</div>
+                    <div class="channelCell">入力</div>
+                </div>
+                <th:block th:each="bravia : ${tvList}">
+                    <div class="row">
+                        <div class="noCell" th:text="${bravia.getTvNo()}"
+                            th:classappend="${failure != 200 ? 'bgRed' : ''}"></div>
+                        <th:block th:if="${bravia.isIgnore()}">
+                            <div class="powerCell" th:text="無視"
+                                th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                        </th:block>
+                        <th:block th:unless="${bravia.isIgnore()}">
+                            <th:block th:if="${bravia.getPowerStatus()} == 404">
+                                <div class="powerCell" th:text="通信断"
+                                    th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                            </th:block>
+                            <th:block th:if="${bravia.getPowerStatus()} == 500">
+                                <div class="powerCell" th:text="スタンバイ"
+                                    th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                            </th:block>
+                            <th:block th:if="${bravia.getPowerStatus()} == 502">
+                                <div class="powerCell" th:text="入力異常"
+                                    th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                            </th:block>
+                            <th:block th:if="${bravia.getPowerStatus()} == 200">
+                                <div class="powerCell" th:text="電源オン"
+                                    th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                            </th:block>
+                        </th:block>
+                        <div class="channelCell" th:text="${bravia.getChannel()}"
+                            th:classappend="${bravia.isFailure() ? 'bgRed' : ''}"></div>
+                    </div>
+                </th:block>
+            </div>
+        </div>
+
+        <th:block th:unless="${failure} == 200">
+            <audio th:src="@{/sound/alert.mp3}" autoplay loop></audio>
+        </th:block>
+    </body>
+</html>

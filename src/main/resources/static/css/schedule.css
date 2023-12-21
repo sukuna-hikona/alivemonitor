@@ -1,0 +1,57 @@
+/* 背景-----------------------------------------------------------------------------------------------------------------*/
+.backGround-Setting {
+    background-color: lightseagreen;
+}
+
+/* タイトル -------------------------------------------------------------------------------------------------------------*/
+.titleTable {
+    display: table;
+}
+.titleRow {
+    display: table-row;
+}
+.prevCell {
+    display: table-cell;
+    width: 100px;
+    text-align: center;
+    border: 1px solid;
+}
+.nowCell {
+    display: table-cell;
+    width: 200px;
+    text-align: center;
+    border: 1px solid;
+}
+.nextCell {
+    display: table-cell;
+    width: 100px;
+    text-align: center;
+    border: 1px solid;
+}
+
+
+/* スケジュール ----------------------------------------------------------------------------------------------------------*/
+.scheduleTable {
+    display: table;
+}
+.scheduleRow {
+    display: table-row;
+}
+.dateCell {
+    display: table-cell;
+    width: 100px;
+    text-align: center;
+    border: 1px solid;
+}
+.timeCell {
+    display: table-cell;
+    width:300px;
+    text-align: center;
+    border: 1px solid;
+}
+.hourTxt {
+    width: 50px;
+}
+.minTxt {
+    width: 50px;
+}

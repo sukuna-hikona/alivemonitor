@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+	<head th:replace="scripts/common :: LoadHeader(title = '試合日程登録', scripts = ~{::script}, links = ~{::link})">
+		<link rel="stylesheet" type="text/css" href=""/>
+        <script type="text/javascript" th:src="@{/js/timeCleaner.js}"></script>
+    </head>
+    <body class="backGround-Setting">
+        <div>
+            <div class="titleTable">
+                <div class="titleRow">
+                    <div class="prevCell">
+                        <a th:href="@{|/Schedule?month=${month - 1}|}" th:text="|${month - 1}月|"></a>
+                    </div>
+                    <div class="nowCell" th:text="|${month}月|"></div>
+                    <div class="nextCell">
+                        <a th:href="@{|/Schedule?month=${month + 1}|}" th:text="|${month + 1}月|"></a>
+                    </div>
+                </div>
+            </div>
+            <form method="post" th:action="@{/ScheduleInput}" th:object="${scheduleDataList}">
+            <div class="scheduleTable">
+                <th:block th:each="scheduleObject, stat : *{scheduleDataList}">
+                    <div class="scheduleRow">
+                        <div class="dateCell" th:text="|*{scheduleDataList[__${stat.index}__].day}日|"></div>
+                        <input type="hidden" th:field="*{scheduleDataList[__${stat.index}__].month}" />
+                        <input type="hidden" th:field="*{scheduleDataList[__${stat.index}__].day}" />
+                        <div class="timeCell">
+                            <input class="hourTxt" type="text" th:field="*{scheduleDataList[__${stat.index}__].hour}" />
+                            <input class="minTxt" type="text" th:field="*{scheduleDataList[__${stat.index}__].minute}" />
+                        </div>
+                    </div>
+                </th:block>
+            </div>
+            <div>
+                <input type="submit" name="regist" />
+                <a th:href="@{/}"><< 戻る</a>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
